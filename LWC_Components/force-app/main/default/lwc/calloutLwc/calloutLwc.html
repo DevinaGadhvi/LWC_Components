@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Callouts from LWC">
+
+    <template lwc:if={showSpinner}>
+        <lightning-spinner alternative-text="Fetching Requested Data" size="small"></lightning-spinner>
+    </template>
+
+    <!--Button to send request from Apex-->
+    <div class="slds-p-around_x-small">
+        <lightning-button label="Send Request from Apex" onclick={handleApexButtonClick} variant="brand">
+        </lightning-button>
+    </div>
+
+    <!--Button to send request from Fetch API-->
+    <div class="slds-p-around_x-small">
+        <lightning-button label="Send Request from Fetch" onclick={handleFetchButtonClick} variant="brand">
+        </lightning-button>
+    </div>
+    
+    <!--Display response data-->
+    <template lwc:if={isSuccess}>
+        <div class="slds-p-around_x-small">
+            <p><i>Response Data from {labelStr}</i></p>
+            <template lwc:if={responseData}>
+                <template for:each={responseData} for:item="each">
+                    <div key={each.key}>
+                        <b>{each.key}</b> -> {each.value}
+                    </div>
+                </template>
+            </template> 
+        </div>
+    </template>
+    </lightning-card>
+</template>
