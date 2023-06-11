@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Search Products" icon-name="standard:product">
+        <lightning-input label="Enter Product Name" onchange={handleInputChange}></lightning-input><br/><br/>
+        <template lwc:if={productsData}>
+            <lightning-datatable
+                key-field="id"
+                data={productsData}
+                columns={columns}
+                hide-checkbox-column>
+        </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
