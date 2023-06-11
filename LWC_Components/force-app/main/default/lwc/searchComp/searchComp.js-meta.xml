@@ -5,4 +5,5 @@
     <targets>
         <target>lightning__HomePage</target>
     </targets>
+    <description>This component has a search box where one can type in the keywords and it will display list of products based on name.</description>
 </LightningComponentBundle>
