@@ -1,0 +1,12 @@
+<template>
+    <lightning-modal-header label={header}></lightning-modal-header>
+    <lightning-modal-body>
+        <div class="slds-text-align_center slds-var-p-around_small">
+            {content}
+        </div>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label={labels.cancelButtonLabel} title={labels.cancelButtonLabel} onclick={handleClose} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label={footerButtonLabel} title={footerButtonLabel} onclick={handleDelete} class="slds-m-left_x-small"></lightning-button>
+    </lightning-modal-footer>
+</template>
