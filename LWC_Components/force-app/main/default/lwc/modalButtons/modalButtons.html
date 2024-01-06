@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title={labels.cardTitleLabel}>
+        <div class="slds-m-left_x-small slds-p-around_x-small">
+            {labels.headerLabel}
+        </div>
+        <div class="slds-align_absolute-center">
+            <lightning-button 
+            label={labels.createButtonLabel} 
+            class="slds-m-left_x-small slds-p-around_x-small" 
+            onclick={handleBtnClick}>
+            </lightning-button>
+
+            <lightning-button 
+            label={labels.deleteButtonLabel} 
+            class="slds-m-left_x-small slds-p-around_x-small" 
+            variant="brand" 
+            onclick={handleBtnClick}>
+            </lightning-button>
+        </div>
+
+    </lightning-card>
+</template>
